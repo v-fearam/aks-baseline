@@ -1400,7 +1400,7 @@ resource paManagedIdentitiesEnabled 'Microsoft.Authorization/policyAssignments@2
 // Note: Policy definition must be deployed as module since policy definitions require a targetScope of 'subscription'.
 
 module modK8sIngressTlsHostsHaveDefinedDomainSuffix 'nested_K8sCustomIngressTlsHostsHaveDefinedDomainSuffix.bicep' = {
-  name: 'modK8sIngressTlsHostsHaveDefinedDomainSuffix'
+  name: 'modK8sIngressTlsHostsHaveDefinedDomainSuffix${location}'
   scope: subscription()
 }
 
